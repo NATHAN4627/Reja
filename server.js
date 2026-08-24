@@ -21,6 +21,9 @@ app.get("/node", function (req, res) {
   res.send("<i>This is node js page</i>");
 });
 
+console.log("helldaso");
+
+
 const server = http.createServer(app);
 let PORT = 3030;
 server.listen(PORT, function () {
