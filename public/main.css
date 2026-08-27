@@ -1,0 +1,405 @@
+.frame{
+    background-color: rgb(193, 167, 133);
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.frame .main_frame{
+    position: relative;
+    width: 1440px;
+    height: 1312px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 2px;
+    background-color: aqua;
+}
+
+.main_frame .left_frame{
+    position: relative; 
+   width: 305px;
+    height: 1315px;
+    background-color: white;
+}
+
+
+.left_frame .left_profile{
+    position: relative;
+    width: 228px;
+    height: 267px;
+    margin-top: 50px;
+    margin-left: 37px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.left_profile .profile_image{
+    position: relative;
+    width: 156.16px;
+    height: 135.05px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    
+    background-color: white;
+}
+
+.left_profile .profile_name{
+    position: relative;
+    width: 66px;
+    height: 20.9px;
+    margin-bottom: 6.65px;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 123.6%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    color: black;
+}
+
+.left_profile .profile_subname{
+    position: relative;
+    width: 147.84px;
+    height: 24.31px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: normal;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 24px;
+    
+    text-transform: capitalize;
+    font-feature-settings: 'call' off, 'kern' off;
+    color: rgb(120, 114, 114);
+}
+.left_profile .profile_icons{
+    position: relative;
+    width: 228px;
+    height: 22px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+.profile_icons .link_href{
+    text-decoration: none;
+    color: black;
+}
+
+.profile_icons .icon{
+    position: relative;
+    width: 25px;
+    height: 23px;
+    border-radius: 50%;
+    margin-top: 5px;
+}
+
+.left_frame .marginer{
+    position: relative;
+    height: 0px;
+    width: 220px;
+    margin-left: 40px;
+    margin-bottom: 25px;
+    border: rgb(199, 193, 193) solid 1px;
+    margin-top: 39px;
+}
+
+.left_frame .left_info{
+    position: relative;
+    width: 221px;
+    height: 126px;
+    margin-left: 40px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.left_frame .info_item{
+    display: flex;
+  justify-content: space-between; /* Chap va o'ngga suradi */
+  align-items: center;
+}
+
+.left_frame .label{
+  background-color: #ffb400; 
+  padding: 2px 6px;
+  font-weight: 500;
+  color: #2b2b2b;
+}
+
+.left_frame .value{
+  color: #2b2b2b;
+  font-weight: 400;
+}
+
+.left_frame .left_lang{
+    position: relative;
+    width: 220px;
+    height: 153px;
+    margin-left: 40px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.lang{
+    font-size: 20px;
+    font-weight: 500;
+    font-style: normal;
+    font-family: sans-serif;
+    margin-top: -5px;
+    margin-bottom: 4px;
+}
+
+.left_frame .lang_block {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.left_frame .progress_bar {
+    width: 100%;
+    height: 6px;
+    border: 1px solid #ffb400;
+    border-radius: 10px;
+    padding: 1px;
+    box-sizing: border-box;
+}
+  
+ .left_frame .progress_fill {
+    height: 100%;
+    background-color: #ffb400;
+    border-radius: 10px;
+}
+
+.left_frame .left_skills{
+    position: relative;
+    width: 220px;
+    height: 242px;
+    margin-left: 40px;
+    margin-bottom: -30px;
+    margin-top: 31px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.left_frame .left_extra_skills{
+    position: relative;
+    width: 186px;
+    height: 148px;
+    margin-left: 40px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.skill_item {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Rasm va matn orasidagi masofa */
+  }
+  
+.skill_icon {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+  }
+  
+.skill_text {
+    font-size: 15px;
+    color: #767676;
+    font-weight: 400;
+  }
+
+.main_frame .midd_frame{
+    position: relative;
+    width: 970px;
+    height: 1259px;
+    margin-left: 30px;
+    margin-right: 27px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main_frame .midd_banner{
+  position: relative;
+  width: 100%;
+  height: 467px;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.main_frame .midd_banner_top {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+    align-items: center;
+    padding: 0 15px;
+    box-sizing: border-box; 
+}
+
+.main_frame .midd_banner_top_left {
+    max-width: 500px;
+}
+
+.main_frame .midd_banner_title {
+    font-size: 48px;
+    font-weight: 700;
+    color: #2b2b2b;
+    line-height: 123.6%;
+    margin-bottom: 18px;
+}
+
+.main_frame .midd_banner_desc {
+    font-size: 16px;
+    color: #767676;
+    line-height: 24px;
+    margin-bottom: 25px;
+}
+
+.main_frame .midd_banner_btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #ffb400;
+    color: #2b2b2b;
+    padding: 16px 32px;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.main_frame .midd_banner_btn:hover {
+    background-color: #e09e00;
+}
+
+.midd_banner_top_right {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.midd_banner_img {
+    height: 467px;
+    object-fit: contain;
+}
+
+.midd_banner_bottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+  }
+  
+  .midd_icon_circle_yellow_top {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ffb400;
+    border-radius: 50%;
+    top: 40px;
+    left: 60px;
+  }
+  
+  .midd_icon_circle_green_top {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border: 2px solid #05ff00;
+    border-radius: 50%;
+    top: 55px;
+    left: 50%;
+  }
+  
+  .midd_icon_rhombus_blue {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #0057ff;
+    transform: rotate(45deg);
+    top: 260px;
+    left: 400px;
+  }
+  
+  .midd_icon_circle_yellow_bottom {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border: 2px solid #ffb400;
+    border-radius: 50%;
+    bottom: 80px;
+    right: 420px;
+  }
+  
+  .midd_icon_circle_green_bottom {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border: 2px solid #05ff00;
+    border-radius: 50%;
+    bottom: 40px;
+    left: 110px;
+  }
+  
+  .midd_icon_triangle_red {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 12px solid #ff2e00;
+    bottom: 40px;
+    right: 50px;
+  }
+  
+  .midd_icon_square_yellow {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border: 2px solid #ffb400;
+    transform: rotate(30deg);
+    top: 50px;
+    right: 80px;
+  }
+
+.main_frame .right_frame{
+    position: relative;
+    width: 108px;
+    height: 1315px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+}

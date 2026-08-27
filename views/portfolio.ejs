@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/main.css" />
+  </head>
+  <body>
+    <div class="frame">
+      <div class="main_frame">
+        <div class="left_frame">
+          <div class="left_profile">
+            <div class="profile_image">
+              <img
+                src="images/profile.png"
+                width="156px"
+                height="142px"
+                alt=""
+              />
+            </div>
+            <div class="profile_name">
+                <%=user.name%>
+            </div>
+            <div class="profile_subname">
+                <%=user.profession%>
+            </div>
+            <div class="profile_icons">
+                <a class="link_href" href="">
+                    <div class="icon">
+                        <img src="icon/Facebook.svg" class="icon-1">
+                    </div>
+                </a>
+                <a class="link_href" href="">
+                    <div class="icon">
+                        <img src="icon/Instagram.svg" class="icon-1">
+                    </div>
+                </a>
+                <a class="link_href" href="">
+                    <div class="icon">
+                        <img src="icon/Linkeding.svg" class="icon-1">
+                    </div>
+                </a>
+                <a class="link_href" href="">
+                    <div class="icon">
+                        <img src="icon/Twitter.svg" class="icon-1">
+                    </div>
+                </a>
+                <a class="link_href" href="">
+                    <div class="icon">
+                        <img src="icon/Youtube.svg" class="icon-1">
+                    </div>
+                </a>
+                <a class="link_href" href="">
+                    <div class="icon">
+                        <img src="icon/Dribbble.svg" class="icon-1">
+                    </div>
+                </a>
+            </div>
+          </div>
+          <div class="marginer"></div>
+          <div class="left_info">
+            <div class="info_item">
+                <span class="label">Age:</span>
+                <span class="value"><%=user.age%></span>
+            </div>
+            <div class="info_item">
+                <span class="label">Residance:</span>
+                <span class="value"><%=user.residence%></span>
+            </div>
+            <div class="info_item">
+                <span class="label">Freelance:</span>
+                <span class="value"><%=user.freelance%></span>
+            </div>
+            <div class="info_item">
+                <span class="label">Address:</span>
+                <span class="value"><%=user.address%></span>
+            </div>
+          </div>
+          <div class="marginer"></div>
+          <div class="left_lang">
+            <h5 class="lang">Languages</h5>
+            <div class="lang_block">
+                <div class="info_item">
+                    <span class="label"><%=user.languages[0]%></span>
+                    <span class="value">100%</span>
+                </div>
+                <div class="progress_bar">
+                    <div class="progress_fill" style="width: 100%;"></div>
+                  </div>
+            </div>
+            <div class="lang_block">
+                <div class="info_item">
+                    <span class="label"><%=user.languages[3]%></span>
+                    <span class="value">90%</span>
+                </div>
+                <div class="progress_bar">
+                    <div class="progress_fill" style="width: 90%;"></div>
+                  </div>
+            </div>
+            <div class="lang_block">
+                <div class="info_item">
+                    <span class="label"><%=user.languages[2]%></span>
+                    <span class="value">80%</span>
+                </div>
+                <div class="progress_bar">
+                    <div class="progress_fill" style="width: 80%;"></div>
+                  </div>
+            </div>
+          </div>
+          <div class="marginer"></div>
+          <div class="left_skills">
+            <h5 class="lang">Skills</h5>
+            <div class="lang_block">
+                <div class="info_item">
+                    <span class="label"><%=user.skills[2]%></span>
+                    <span class="value">80%</span>
+                </div>
+                <div class="progress_bar">
+                    <div class="progress_fill" style="width: 80%;"></div>
+                  </div>
+            </div>
+            <div class="lang_block">
+                <div class="info_item">
+                    <span class="label"><%=user.skills[2]%></span>
+                    <span class="value">90%</span>
+                </div>
+                <div class="progress_bar">
+                    <div class="progress_fill" style="width: 90%;"></div>
+                  </div>
+            </div>
+            <div class="lang_block">
+                <div class="info_item">
+                    <span class="label"><%=user.skills[0]%></span>
+                    <span class="value">100%</span>
+                </div>
+                <div class="progress_bar">
+                    <div class="progress_fill" style="width: 100%;"></div>
+                  </div>
+            </div>
+            <div class="lang_block">
+                <div class="info_item">
+                    <span class="label"><%=user.skills[3]%></span>
+                    <span class="value">80%</span>
+                </div>
+                <div class="progress_bar">
+                    <div class="progress_fill" style="width: 80%;"></div>
+                  </div>
+            </div>
+          </div>
+          <div class="marginer"></div>
+          <div class="left_extra_skills">
+            <h5 class="lang">Extra Skills</h5>
+            <% user.extra_skills.forEach(skill => { %>
+                <div class="skill_item">
+                  <!-- Icon o'rniga o'zingizdagi rasm fayl yo'lini (masalan: /images/icon.svg) qoying -->
+                  <img src="icon/Icons.svg" alt="icon" class="skill_icon" />
+                  <span class="skill_text"><%= skill %></span>
+                </div>
+              <% }) %>
+          </div>
+          <div class="marginer"></div>
+        </div>
+        <div class="midd_frame">
+            <div class="midd_banner">
+                <div class="midd_banner_top">
+                    <div class="midd_banner_top_left">
+                        <h1 class="midd_banner_title"><%=user.work_place%></h1>
+                        <p class="midd_banner_desc"><%=user.about_me%></p>
+                        <a class="midd_banner_btn" href="#">
+                            HIRE ME <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="midd_banner_top_right">
+                        <img src="images/mainImage.png" alt="" class="midd_banner_img">
+                    </div>
+
+                    <div class="midd_banner_bottom">
+                        <div class="midd_icon_circle_yellow_top"></div>
+                        <div class="midd_icon_rhombus_blue"></div>
+                        <div class="midd_icon_circle_green_top"></div>
+                        <div class="midd_icon_circle_green_bottom"></div>
+                        <div class="midd_icon_circle_yellow_bottom"></div>
+                        <div class="midd_icon_triangle_red"></div>
+                        <div class="midd_icon_square_yellow"></div>
+                      </div>
+                </div>
+            </div>
+
+            <div class="midd_services">
+                <div class="midd_services_top">
+                    <h2 class="midd_services_title">My Services</h2>
+                    <p class="midd_services_desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium natus, veniam amet excepturi, impedit quidem voluptatum dolor possimus minus incidunt aliquam perspiciatis dolorum expedita nisi nihil odit quo. Natus, ipsum.</p>
+                </div>
+            </div>
+
+            <div class="midd_services_bottom">
+                <div class="midd_services_card">
+                    <img src="" alt="" class="service_icon">
+                    <h3 class="service_title"></h3>
+                </div>
+            </div>
+        </div>
+        <div class="right_frame"></div>
+      </div>
+    </div>
+  </body>
+</html>
