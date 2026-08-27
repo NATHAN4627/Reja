@@ -1,5 +1,5 @@
 .frame{
-    background-color: rgb(193, 167, 133);
+    background-color: rgb(237, 237, 237);
     width: 100%;
     height: 100%;
     position: relative;
@@ -16,7 +16,7 @@
     flex-direction: row;
     align-items: center;
     margin-top: 2px;
-    background-color: aqua;
+    background-color: rgb(237, 237, 237);
 }
 
 .main_frame .left_frame{
@@ -51,6 +51,13 @@
     margin-bottom: 30px;
     
     background-color: white;
+}
+
+.profile_image img{
+    border-radius: 50%;
+    height: 160px;
+    width: 160px;
+    object-fit:fill
 }
 
 .left_profile .profile_name{
@@ -218,7 +225,7 @@
 .skill_item {
     display: flex;
     align-items: center;
-    gap: 15px; /* Rasm va matn orasidagi masofa */
+    gap: 15px; 
   }
   
 .skill_icon {
@@ -308,8 +315,9 @@
 }
 
 .midd_banner_img {
-    height: 467px;
+    height: 400px;
     object-fit: contain;
+    
 }
 
 .midd_banner_bottom {
@@ -322,17 +330,17 @@
     pointer-events: none;
   }
   
-  .midd_icon_circle_yellow_top {
+.midd_icon_circle_yellow_top {
     position: absolute;
     width: 16px;
     height: 16px;
     border: 2px solid #ffb400;
     border-radius: 50%;
-    top: 40px;
-    left: 60px;
+    top: 60px;
+    left: 90px;
   }
   
-  .midd_icon_circle_green_top {
+.midd_icon_circle_green_top {
     position: absolute;
     width: 14px;
     height: 14px;
@@ -342,17 +350,17 @@
     left: 50%;
   }
   
-  .midd_icon_rhombus_blue {
+.midd_icon_rhombus_blue {
     position: absolute;
     width: 12px;
     height: 12px;
     border: 2px solid #0057ff;
-    transform: rotate(45deg);
-    top: 260px;
-    left: 400px;
+    transform: rotate(35deg);
+    top: 230px;
+    left: 370px;
   }
   
-  .midd_icon_circle_yellow_bottom {
+.midd_icon_circle_yellow_bottom {
     position: absolute;
     width: 14px;
     height: 14px;
@@ -362,28 +370,28 @@
     right: 420px;
   }
   
-  .midd_icon_circle_green_bottom {
+.midd_icon_circle_green_bottom {
     position: absolute;
     width: 14px;
     height: 14px;
     border: 2px solid #05ff00;
     border-radius: 50%;
     bottom: 40px;
-    left: 110px;
+    left: 290px;
   }
   
-  .midd_icon_triangle_red {
+.midd_icon_triangle_red {
     position: absolute;
     width: 0;
     height: 0;
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
     border-bottom: 12px solid #ff2e00;
-    bottom: 40px;
+    bottom: 140px;
     right: 50px;
   }
   
-  .midd_icon_square_yellow {
+.midd_icon_square_yellow {
     position: absolute;
     width: 14px;
     height: 14px;
@@ -391,7 +399,86 @@
     transform: rotate(30deg);
     top: 50px;
     right: 80px;
+}
+
+.midd_services{
+    width: 100%;
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.midd_services_top{
+    text-align: center;
+    max-width: 438px;
+    margin-bottom: 50px;
+}
+
+.midd_services_title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #2b2b2b;
+    margin-bottom: 25px;
   }
+  
+.midd_services_desc {
+    font-size: 15px;
+    color: #767676;
+    line-height: 24px;
+}
+
+.midd_services_bottom{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.services_card{
+    background-color: #ffffff;
+    padding: 30px 25px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.service_icon {
+    width: 68px;
+    height: 68px;
+    margin-bottom: 25px;
+}
+  
+.service_title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2b2b2b;
+    margin-bottom: 15px;
+}
+  
+.service_sub {
+    font-size: 15px;
+    color: #767676;
+}
+
+.service_desc_text {
+    font-size: 13px;
+    color: #767676;
+    line-height: 20px;
+    margin-bottom: 15px;
+  }
+  
+.order_link {
+    font-size: 12px;
+    font-weight: 700;
+    color: #ffb400;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+
 
 .main_frame .right_frame{
     position: relative;
@@ -402,4 +489,41 @@
     text-align: center;
     align-items: center;
     background-color: rgb(255, 255, 255);
+}
+
+.right_top {
+    margin-bottom: 120px;
+}
+
+.theme_toggle {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.theme_icon {
+    width: 24px;
+    height: 24px;
+    margin-top: 160px;
+}
+
+.right_middle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin-top: 160px;
+}
+
+.nav_item{
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
 }
