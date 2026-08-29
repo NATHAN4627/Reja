@@ -7,6 +7,8 @@ const list = [
   "endi dam oling, foydasi yoq endi", // 60
 ];
 
+// CALLBACK FUNCTIONS
+
 function giveAdvice(a, callback) {
   if (typeof a !== "number") callback("Enter numbers only", null);
   else if (a <= 20) callback(null, list[0]);
@@ -15,17 +17,54 @@ function giveAdvice(a, callback) {
   else if (a > 40 && a <= 50) callback(null, list[3]);
   else if (a > 50 && a <= 60) callback(null, list[4]);
   else {
-    callback(null, list[5]);
+    setInterval(function(){
+      callback(null, list[5]);
+    },1000)
   }
 }
 
-giveAdvice(21, (err, data) => {
+giveAdvice(31, (err, data) => {
   if (data) {
     console.log(data);
   } else {
     console.log("Error", err);
   }
 });
+
+//ASYNC FUNCTIONS
+
+// async function giveAdvice(a) {
+//   if (typeof a !== "number") throw new Error("Enter numbers only", null);
+//   else if (a <= 20) return list[0];
+//   else if (a > 20 && a <= 30) return list[1];
+//   else if (a > 30 && a <= 40) return list[2];
+//   else if (a > 40 && a <= 50)
+//     return new Promise((resolve, reject) => {
+//       setTimeout(function () {
+//         resolve(list[3]);
+//       }, 5000);
+//     });
+//   else if (a > 50 && a <= 60) return list[4];
+//   else {
+//     return list[5];
+//   }
+// }
+
+// console.log("0");
+
+// async function get() {
+//   return "Got advice";
+// }
+
+// async function run() {
+//   let res = await giveAdvice(45);
+//   console.log(res);
+//   res = await get();
+//   console.log(res);
+// }
+// console.log("1");
+
+// run();
 
 // CALCULATE NUMBERS
 
@@ -67,7 +106,6 @@ giveAdvice(21, (err, data) => {
 // }
 
 // calculate(5, 3, multiply);
-
 
 //FIND EVEN NUMBERS
 
