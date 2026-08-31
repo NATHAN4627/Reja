@@ -1,19 +1,38 @@
-//MIT TASK
-function countLetter(a, b) {
+// B TASK
+function countDigits(input) {
   let count = 0;
-  for (let i = 0; i < b.length; i++) {
-    if (b[i] === a) {
+
+  for (let i = 0; i < input.length; i++) {
+    // nechta raqam borligini sanaydi aylanib, (!) borligi uchun, agar bolmasa string'ni sanaydi
+    if (!isNaN(input[i])) {
       count++;
     }
   }
 
   if (count === 0) {
-    console.log("There is no any letter here");
+    console.log("There is no any numbers");
   }
   return count;
 }
 
-console.log(countLetter("e", "engineer"));
+console.log(countDigits("dasdasd94736"));
+
+//MIT TASK
+// function countLetter(a, b) {
+//   let count = 0;
+//   for (let i = 0; i < b.length; i++) {
+//     if (b[i] === a) {
+//       count++;
+//     }
+//   }
+
+//   if (count === 0) {
+//     console.log("There is no any letter here");
+//   }
+//   return count;
+// }
+
+// console.log(countLetter("e", "engineer"));
 
 // const list = [
 //   "yahshi talaba boling", // 0-20
