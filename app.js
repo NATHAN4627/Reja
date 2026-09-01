@@ -3,8 +3,7 @@ const app = express(); //app object olindi express() function orqali
 const fs = require("fs");
 
 //MongoDB call
-const db = require("./server").db(); // db'da CRUD qila olamiz bu yul bilan (.db())
-
+const db = require("./server").db(); // db orqali bazani chaqiramiz
 let user;
 fs.readFile("database/user.json", "utf-8", (err, data) => {
   if (err) {
@@ -25,13 +24,29 @@ app.set("view engine", "ejs");
 
 //4 Routing code
 app.post("/create-item", (req, res) => {
-  console.log(req.body);
-  res.json({ test: "Success" });
-  //res.send("Success")
+
+  const new_reja = req.body.reja;
+  db.collection("plans").insertOne({ reja: new_reja }, (err, data) => {
+    if (err) {
+      console.log(err);
+      res.send("something went wrong");
+    } else {
+      res.end("Success added");
+    }
+  });
 });
 
 app.get("/", (req, res) => {
-  res.render("reja");
+  db.collection("plans")
+    .find()
+    .toArray((err, data) => {
+      if (err) {
+        console.log(err);
+        res.end("Something went wrong");
+      } else {
+        res.render("reja", { items: data });
+      }
+    });
 });
 
 app.get("/portfolio", (req, res) => {
