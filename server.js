@@ -1,8 +1,7 @@
 const http = require("http");
 const mongodb = require("mongodb");
 
-let db;
-let connectionString =
+const connectionString =
   "mongodb+srv://nodiroqilov86_db_user:Nodir556@cluster0.bcvgfgw.mongodb.net/Reja";
 
 mongodb.connect(
@@ -13,18 +12,14 @@ mongodb.connect(
   },
   (err, client) => {
     if (err) {
-      console.log("Error on connection to MongoDB");
+      console.log("Connection failed");
     } else {
-      console.log("Connection success");
-      module.exports = client;  // export, bcz we use it often
-
+      module.exports = client;
       const app = require("./app");
+
       const server = http.createServer(app);
-      let PORT = 3030;
-      server.listen(PORT, function () {
-        console.log(
-          `Port: ${PORT} is running successfully on server, http://localhost:${PORT}`
-        );
+      server.listen(3030, () => {
+        console.log("Port is running");
       });
     }
   }

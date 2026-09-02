@@ -27,12 +27,7 @@ app.post("/create-item", (req, res) => {
 
   const new_reja = req.body.reja;
   db.collection("plans").insertOne({ reja: new_reja }, (err, data) => {
-    if (err) {
-      console.log(err);
-      res.send("something went wrong");
-    } else {
-      res.end("Success added");
-    }
+    res.json(data.ops[0]);
   });
 });
 
