@@ -1,21 +1,39 @@
-// B TASK
-function countDigits(input) {
-  let count = 0;
+// C TASK
 
-  for (let i = 0; i < input.length; i++) {
-    // nechta raqam borligini sanaydi aylanib, (!) borligi uchun, agar bolmasa string'ni sanaydi
-    if (!isNaN(input[i])) {
-      count++;
-    }
+function checkContent(str1, str2) {
+  if (str1.length !== str2.length) {
+    return false;
   }
 
-  if (count === 0) {
-    console.log("There is no any numbers");
-  }
-  return count;
+  const res_str1 = str1.split("").sort().join();
+  console.log(res_str1);
+  const res_str2 = str2.split("").sort().join();
+  console.log(res_str2);
+
+  return res_str1 === res_str2;
 }
 
-console.log(countDigits("dasdasd94736"));
+console.log(checkContent("nodir123", "ridno321"));
+
+// B TASK
+
+// function countDigits(input) {
+//   let count = 0;
+
+//   for (let i = 0; i < input.length; i++) {
+//     // nechta raqam borligini sanaydi aylanib, (!) borligi uchun, agar bolmasa string'ni sanaydi
+//     if (!isNaN(input[i])) {
+//       count++;
+//     }
+//   }
+
+//   if (count === 0) {
+//     console.log("There is no any numbers");
+//   }
+//   return count;
+// }
+
+// console.log(countDigits("dasdasd94736"));
 
 //MIT TASK
 // function countLetter(a, b) {
