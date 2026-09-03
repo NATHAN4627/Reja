@@ -1,5 +1,3 @@
-
-
 const createField = document.getElementById("create-field");
 
 function itemTemplate(item) {
@@ -28,7 +26,25 @@ document.getElementById("create-form").addEventListener("submit", function (e) {
       createField.focus();
     })
     .catch((err) => {
-        console.log("Try again!");
-
+      console.log("Try again!");
     });
+});
+
+document.addEventListener("click", function (e) {
+  if (e.target.classList.contains("delete-me")) {
+    if (confirm("Are you sure you want to delete it?")) {
+      const data_id = e.target.getAttribute("data_id");
+      axios
+        .post("/delete-item", { id: data_id })
+        .then((response) => {
+          e.target.parentElement.parentElement.remove();
+        })
+        .catch((err) => {
+          console.log("Please try again!");
+        });
+    }
+  }
+
+  if (e.target.classList.contains("edit-me")) {
+  }
 });

@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express(); //app object olindi express() function orqali
 const fs = require("fs");
+const mongodb = require("mongodb");
 
 //MongoDB call
 const db = require("./server").db(); // db orqali bazani chaqiramiz
@@ -24,7 +25,6 @@ app.set("view engine", "ejs");
 
 //4 Routing code
 app.post("/create-item", (req, res) => {
-
   const new_reja = req.body.reja;
   db.collection("plans").insertOne({ reja: new_reja }, (err, data) => {
     res.json(data.ops[0]);
@@ -42,6 +42,16 @@ app.get("/", (req, res) => {
         res.render("reja", { items: data });
       }
     });
+});
+
+app.post("/delete-item", (req, res) => {
+  const id = req.body.id;
+  db.collection("plans").deleteOne(
+    { _id: new mongodb.ObjectId(id) },
+    (err, data) => {
+      res.json({ state: "success" });
+    }
+  );
 });
 
 app.get("/portfolio", (req, res) => {
