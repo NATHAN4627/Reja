@@ -46,5 +46,39 @@ document.addEventListener("click", function (e) {
   }
 
   if (e.target.classList.contains("edit-me")) {
+    let userInput = prompt(
+      "Rejani ozgartiring",
+      e.target.parentElement.parentElement.querySelector(".item-text").innerHTML
+    );
+    if (userInput) {
+      axios
+        .post("/edit-item", {
+          id: e.target.getAttribute("data_id"),
+          new_input: userInput,
+        })
+        .then((response) => {
+          e.target.parentElement.parentElement.querySelector(
+            ".item-text"
+          ).innerHTML = userInput;
+        })
+        .catch((err) => {
+          if (err) {
+            console.log("Try again to edit!");
+          }
+        });
+    }
   }
+});
+
+document.getElementById("clean-all").addEventListener("click", function () {
+  axios
+    .post("/delete-all", { delete_all: true })
+    .then((response) => {
+      document.location.reload();
+    })
+    .catch((err) => {
+      if (err) {
+        console.log("Try again to delete all!");
+      }
+    });
 });
