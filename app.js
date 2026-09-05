@@ -55,12 +55,15 @@ app.post("/delete-item", (req, res) => {
 });
 
 app.post("/edit-item", (req, res) => {
+  //Step 3 (edit)
   const data = req.body;
+  //Step 4
   db.collection("plans").findOneAndUpdate(
     {
       _id: new mongodb.ObjectId(data.id),
     },
     { $set: { reja: data.new_input } },
+    //Step 6 (edit)
     (err, data) => {
       res.json({ state: "success" });
     }

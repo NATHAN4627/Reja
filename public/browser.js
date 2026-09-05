@@ -46,16 +46,19 @@ document.addEventListener("click", function (e) {
   }
 
   if (e.target.classList.contains("edit-me")) {
+    //Step 1
     let userInput = prompt(
       "Rejani ozgartiring",
       e.target.parentElement.parentElement.querySelector(".item-text").innerHTML
     );
     if (userInput) {
+      //Step 2
       axios
         .post("/edit-item", {
           id: e.target.getAttribute("data_id"),
           new_input: userInput,
         })
+        //Step 5
         .then((response) => {
           e.target.parentElement.parentElement.querySelector(
             ".item-text"
@@ -71,14 +74,16 @@ document.addEventListener("click", function (e) {
 });
 
 document.getElementById("clean-all").addEventListener("click", function () {
-  axios
-    .post("/delete-all", { delete_all: true })
-    .then((response) => {
-      document.location.reload();
-    })
-    .catch((err) => {
-      if (err) {
-        console.log("Try again to delete all!");
-      }
-    });
+  if (confirm("Are you sure you want to delete all?")) {
+    axios
+      .post("/delete-all", { delete_all: true })
+      .then((response) => {
+        document.location.reload();
+      })
+      .catch((err) => {
+        if (err) {
+          console.log("Try again to delete all!");
+        }
+      });
+  }
 });
