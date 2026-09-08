@@ -1,19 +1,64 @@
-// C TASK
+// D TASK
 
-function checkContent(str1, str2) {
-  if (str1.length !== str2.length) {
-    return false;
+const moment = require("moment");
+
+class Shop {
+  constructor(non, lagmon, cola) {
+    this.lagmon = lagmon;
+    this.cola = cola;
+    this.non = non;
   }
 
-  const res_str1 = str1.split("").sort().join();
-  console.log(res_str1);
-  const res_str2 = str2.split("").sort().join();
-  console.log(res_str2);
+  qoldiq() {
+    const time = this.getCurrentTime();
+    const res = `Hozirgi vaqt: ${time} \nHozir ${this.non} ta non, ${this.lagmon}ta lagmon va ${this.cola} ta cola mavjud!`;
+    return res;
+  }
 
-  return res_str1 === res_str2;
+  sotish(product, amount) {
+    if (this[product] >= amount) {
+      const time = this.getCurrentTime();
+      this[product] -= amount;
+      return `Hozirgi vaqt: ${time}\n${product} ${amount}ta sotildi!`;
+    } else {
+      return "Mahsulot yetarli emas!";
+    }
+  }
+
+  qabul(product, amount) {
+    const time = this.getCurrentTime();
+    if(!this[product]){
+      return "Bu mahsulot mavjud emas!"
+    }
+    this[product] += amount;
+    return `Hozirgi vaqt: ${time}\n${amount}ta ${product} qabul qilindi!`;
+  }
+
+  getCurrentTime() {
+    return moment().format("HH:mm");
+  }
 }
 
-console.log(checkContent("nodir123", "ridno321"));
+const shop = new Shop(3, 6, 2);
+console.log(shop.sotish("non", 2));
+console.log(shop.qoldiq());
+console.log(shop.qabul("pepsi", 4));
+console.log(shop.qoldiq());
+
+// function checkContent(str1, str2) {
+//   if (str1.length !== str2.length) {
+//     return false;
+//   }
+
+//   const res_str1 = str1.split("").sort().join();
+//   console.log(res_str1);
+//   const res_str2 = str2.split("").sort().join();
+//   console.log(res_str2);
+
+//   return res_str1 === res_str2;
+// }
+
+// console.log(checkContent("nodir123", "ridno321"));
 
 // B TASK
 
