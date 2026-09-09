@@ -1,50 +1,57 @@
-// D TASK
-
-const moment = require("moment");
-
-class Shop {
-  constructor(non, lagmon, cola) {
-    this.lagmon = lagmon;
-    this.cola = cola;
-    this.non = non;
-  }
-
-  qoldiq() {
-    const time = this.getCurrentTime();
-    const res = `Hozirgi vaqt: ${time} \nHozir ${this.non} ta non, ${this.lagmon}ta lagmon va ${this.cola} ta cola mavjud!`;
-    return res;
-  }
-
-  sotish(product, amount) {
-    if (this[product] >= amount) {
-      const time = this.getCurrentTime();
-      this[product] -= amount;
-      return `Hozirgi vaqt: ${time}\n${product} ${amount}ta sotildi!`;
-    } else {
-      return "Mahsulot yetarli emas!";
-    }
-  }
-
-  qabul(product, amount) {
-    const time = this.getCurrentTime();
-    if(!this[product]){
-      return "Bu mahsulot mavjud emas!"
-    }
-    this[product] += amount;
-    return `Hozirgi vaqt: ${time}\n${amount}ta ${product} qabul qilindi!`;
-  }
-
-  getCurrentTime() {
-    return moment().format("HH:mm");
-  }
+// E TASK
+function getReverse(input) {
+  return input.split("").reverse().join("")
 }
 
-const shop = new Shop(3, 6, 2);
-console.log(shop.sotish("non", 2));
-console.log(shop.qoldiq());
-console.log(shop.qabul("pepsi", 4));
-console.log(shop.qoldiq());
+console.log(getReverse("Hello"));
 
+// D TASK
+// const moment = require("moment");
+
+// class Shop {
+//   constructor(non, lagmon, cola) {
+//     this.lagmon = lagmon;
+//     this.cola = cola;
+//     this.non = non;
+//   }
+
+//   qoldiq() {
+//     const time = this.getCurrentTime();
+//     const res = `Hozirgi vaqt: ${time} \nHozir ${this.non} ta non, ${this.lagmon}ta lagmon va ${this.cola} ta cola mavjud!`;
+//     return res;
+//   }
+
+//   sotish(product, amount) {
+//     if (this[product] >= amount) {
+//       const time = this.getCurrentTime();
+//       this[product] -= amount;
+//       return `Hozirgi vaqt: ${time}\n${product} ${amount}ta sotildi!`;
+//     } else {
+//       return "Mahsulot yetarli emas!";
+//     }
+//   }
+
+//   qabul(product, amount) {
+//     const time = this.getCurrentTime();
+//     if(!this[product]){
+//       return "Bu mahsulot mavjud emas!"
+//     }
+//     this[product] += amount;
+//     return `Hozirgi vaqt: ${time}\n${amount}ta ${product} qabul qilindi!`;
+//   }
+
+//   getCurrentTime() {
+//     return moment().format("HH:mm");
+//   }
+// }
+
+// const shop = new Shop(3, 6, 2);
+// console.log(shop.sotish("non", 2));
+// console.log(shop.qoldiq());
+// console.log(shop.qabul("pepsi", 4));
+// console.log(shop.qoldiq());
+
+// Task C
 // function checkContent(str1, str2) {
 //   if (str1.length !== str2.length) {
 //     return false;
