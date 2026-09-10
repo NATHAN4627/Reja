@@ -1,6 +1,6 @@
 // E TASK
 function getReverse(input) {
-  return input.split("").reverse().join("")
+  return input.split("").reverse().join("");
 }
 
 console.log(getReverse("Hello"));
