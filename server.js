@@ -18,7 +18,7 @@ mongodb.connect(
       const app = require("./app");
 
       const server = http.createServer(app);
-      server.listen(3030, () => {
+      server.listen(9004, () => {
         console.log("Port is running");
       });
     }
