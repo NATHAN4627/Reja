@@ -1,9 +1,25 @@
-// E TASK
-function getReverse(input) {
-  return input.split("").reverse().join("");
+// K Task 
+
+function countVowels(str) {
+  const vowels = ["a", "e", "o", "i", "u"];
+  res = str.toLowerCase();
+  count = 0;
+  for (let i = 0; i < str.length; i++) {
+    if (vowels.includes(res[i])) {
+      count++;
+    }
+  }
+  return count;
 }
 
-console.log(getReverse("Hello"));
+console.log(countVowels("Engineering"));
+
+// // E TASK
+// function getReverse(input) {
+//   return input.split("").reverse().join("");
+// }
+
+// console.log(getReverse("Hello"));
 
 // D TASK
 // const moment = require("moment");
